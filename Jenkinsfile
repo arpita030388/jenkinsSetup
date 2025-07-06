@@ -14,13 +14,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'building..'
+                echo 'Compiling..'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'testing..'
+                bat 'mvn test'
             }
         }
     }
