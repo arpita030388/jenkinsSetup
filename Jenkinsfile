@@ -35,6 +35,13 @@ pipeline {
             keepAll: true,
             alwaysLinkToLastBuild: true
         ])
+           publishHTML(target: [
+            reportDir: 'target/test-output',
+            reportFiles: 'ExtentReport.html',
+            reportName: 'Extent HTML Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true
+        ])
         allure([
             includeProperties: false,
             jdk: '',
