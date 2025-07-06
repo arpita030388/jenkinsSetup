@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+               git url: 'https://github.com/arpita030388/jenkinsSetup.git'
             }
             }
         }
