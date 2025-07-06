@@ -10,5 +10,22 @@
             <class name="tests.testmaintwo"/>
         </classes>
     </test>
+    <test name="RunAnnotation">
+        <classes>
+            <class name="tests.AnnotationDemoTest"/>
+        </classes>
+    </test>
+    <test name="RunExtentRepot">
+        <classes>
+            <class name="tests.testextentreport"/>
+        </classes>
+    </test>
+    <test name="LoginTest">
+        <parameter name="username" value="admin"/>
+        <parameter name="password" value="admin123"/>
+        <classes>
+            <class name="tests.ParameterTest"/>
+        </classes>
+    </test>
     <!--can be set as packages-->
 </suite>
