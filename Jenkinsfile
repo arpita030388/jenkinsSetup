@@ -26,4 +26,16 @@ pipeline {
             }
         }
     }
+    post {
+    always {
+        publishHTML(target: [
+            reportDir: 'target/surefire-reports',
+            reportFiles: 'index.html',
+            reportName: 'TestNG HTML Report',
+            keepAll: true,
+            alwaysLinkToLastBuild: true
+        ])
+    }
+}
+
 }
