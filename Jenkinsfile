@@ -35,6 +35,11 @@ pipeline {
             keepAll: true,
             alwaysLinkToLastBuild: true
         ])
+        allure([
+            includeProperties: false,
+            jdk: '',
+            results: [[path: 'target/allure-results']]
+        ])
     }
 }
 
