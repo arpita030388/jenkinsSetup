@@ -1,11 +1,12 @@
+package tests;
+
 import org.testng.annotations.Test;
 
 import static org.example.Main.printNumber;
 
-public class Testmain {
-
+public class testmaintwo {
     @Test
-    public void TestPrintNumber(){
+    public void TestPrintNumbertwo(){
         printNumber();
     }
 
