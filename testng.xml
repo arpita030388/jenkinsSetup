@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SampleSuite">
+    <test name="RunTestmain">
+        <classes>
+            <class name="tests.Testmain"/>
+        </classes>
+    </test>
+    <test name="RunTestmaintwo">
+        <classes>
+            <class name="tests.testmaintwo"/>
+        </classes>
+    </test>
+    <!--can be set as packages-->
+</suite>
