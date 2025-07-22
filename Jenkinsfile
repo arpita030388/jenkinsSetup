@@ -28,6 +28,12 @@ pipeline {
     }
     post {
     always {
+       def logFile = "${env.WORKSPACE}/consoleOutput.txt"
+                def buildLog = currentBuild.rawBuild.getLog(1000).join('\n')
+                writeFile file: logFile, text: buildLog
+                archiveArtifacts artifacts: 'consoleOutput.txt', allowEmptyArchive: false
+            }
+
         publishHTML(target: [
             reportDir: 'target/surefire-reports',
             reportFiles: 'index.html',
