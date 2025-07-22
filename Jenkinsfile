@@ -28,6 +28,7 @@ pipeline {
     }
     post {
     always {
+    script{
        def logFile = "${env.WORKSPACE}/consoleOutput.txt"
                 def buildLog = currentBuild.rawBuild.getLog(1000).join('\n')
                 writeFile file: logFile, text: buildLog
